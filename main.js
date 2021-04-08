@@ -35,9 +35,8 @@ Chysla.forEach(element => {
 let newNumbers=Chysla.map(function(num) {
     return num * 3;
 });
- 
-console.log(newNumbers);
-// g) Порахувати загальну суму всіх елментів у масиві (reduce)
+ console.log(newNumbers);
 
-
-
+ // g) Порахувати загальну суму всіх елментів у масиві (reduce)
+let result = Chysla.reduce((sum, current) => sum + current)
+console.log(result);
