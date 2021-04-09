@@ -14,13 +14,11 @@ console.log("__________");
 
 
 // c) Відфільтрувати числа які є кратними 3.
-console.log("__________");
 let filt3Chysla=Chysla.filter((value)=>{
     return value%3===0;
 });
 console.log(filt3Chysla);
 console.log("__________");
-
 
 // d) Відфільтрувати числа які є більшими за 10.
 let filt10Chysla=Chysla.filter((value)=>{
@@ -34,7 +32,6 @@ Chysla.forEach(element => {
     document.write(element);
     document.write("<br>");
 });
-console.log("__________");
 
 // f) За допомогою map збільшити кожен елемент в масиві в три рази.
 let newNumbers=Chysla.map(function(num) {
