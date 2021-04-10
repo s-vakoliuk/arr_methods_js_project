@@ -91,27 +91,29 @@ const ArrUsers = [
    {name: 'max', age: 31, isMarried: true}
 ];
 //a) відсортувати його за  віком (зростання)
-//ArrUsers.age.sort(function(a, b){return a - b});
+
 console.log("відсортувати його за  віком (зростання)");
-ArrUsers.sort((ByAge));
-function ByAge(a,b){
-    if(a.age>b.age){
-        return 1;
-    }
-    return -1;
-};
+ArrUsers.sort(function(a,b){return a.age - b.age});
+// ArrUsers.sort((ByAge));
+// function ByAge(a,b){
+//     if(a.age>b.age){
+//         return 1;
+//     }
+//     return -1;
+// };
 console.log(ArrUsers);
 
 // відсортувати його за  віком (спадання)
-console.log("відсортувати його за  віком (спадання)");
-ArrUsers.sort((ByAge));
-function ByAge(a,b){
-    if(a.age<b.age){
-        return 1;
-    }
-    return -1;
-};
-console.log(ArrUsers);
+ console.log("відсортувати його за  віком (спадання)");
+ ArrUsers.sort(function(a,b){return b.age - a.age});
+// ArrUsers.sort((ByAge));
+// function ByAge(a,b){
+//     if(a.age<b.age){
+//         return 1;
+//     }
+//     return -1;
+// };
+ console.log(ArrUsers);
 
 /*b) відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
 c) пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення),
