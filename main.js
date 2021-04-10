@@ -55,8 +55,13 @@ console.log(ArrStrings);
 
 // b) Відсортувати в зворотньому порядку
 console.log("Відсортувати в зворотньому порядку")
-ArrStrings.reverse();
-console.log(ArrStrings);
+let SortArrStrings=ArrStrings.sort((a,b) => {
+    if (a < b) {
+        return 1
+    }
+    return -1
+});
+console.log(SortArrStrings);
 
 // c) Отримати в новому масиві тільки ті слова, довжина яких більша за 4 букви (filter)
 console.log("Отримати в новому масиві тільки ті слова, довжина яких більша за 4 букви (filter)");
@@ -65,15 +70,14 @@ console.log(NewArrStrings);
 
 // d) Змінити кожне слово в масиві додавши на початок 'Sam says *ваше слово*'
 console.log("Змінити кожне слово в масиві додавши на початок 'Sam says *ваше слово*'");
-let ArrСhangestring=ArrStrings.map((value, index) =>{
+let ArrСhangeStrings=ArrStrings.map((value, index) =>{
     return "Sam says you good boy";
 } );
-console.log(ArrСhangestring);
+console.log(ArrСhangeStrings);
 
-/*3) Все робити тільки за допомогою методів масивів!
-
-Дано масив :
-const users = [
+//3) Все робити тільки за допомогою методів масивів!
+//Дано масив :
+const ArrUsers = [
    {name: 'vasya', age: 31, isMarried: false},
    {name: 'petya', age: 30, isMarried: true},
    {name: 'kolya', age: 29, isMarried: true},
@@ -86,8 +90,29 @@ const users = [
    {name: 'olya', age: 31, isMarried: false},
    {name: 'max', age: 31, isMarried: true}
 ];
-a) відсортувати його за  віком (зростання, а потім окремо спадання)
-b) відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
+//a) відсортувати його за  віком (зростання, а потім окремо спадання)
+//ArrUsers.age.sort(function(a, b){return a - b});
+console.log("відсортувати його за  віком (зростання)");
+ArrUsers.sort((ByAge));
+function ByAge(a,b){
+    if(a.age>b.age){
+        return 1;
+    }
+    return -1;
+};
+console.log(ArrUsers);
+
+console.log("відсортувати його за  віком (спадання)");
+ArrUsers.sort((ByAge));
+function ByAge(a,b){
+    if(a.age>b.age){
+        return -1;
+    }
+    return 1;
+};
+console.log(ArrUsers);
+
+/*b) відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
 c) пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення),
    та зберегти це в новий масив (первинний масив залишиться без змін)
 d) відсортувати його за індентифікатором
