@@ -90,7 +90,7 @@ const ArrUsers = [
    {name: 'olya', age: 31, isMarried: false},
    {name: 'max', age: 31, isMarried: true}
 ];
-//a) відсортувати його за  віком (зростання, а потім окремо спадання)
+//a) відсортувати його за  віком (зростання)
 //ArrUsers.age.sort(function(a, b){return a - b});
 console.log("відсортувати його за  віком (зростання)");
 ArrUsers.sort((ByAge));
@@ -102,13 +102,14 @@ function ByAge(a,b){
 };
 console.log(ArrUsers);
 
+// відсортувати його за  віком (спадання)
 console.log("відсортувати його за  віком (спадання)");
 ArrUsers.sort((ByAge));
 function ByAge(a,b){
-    if(a.age>b.age){
-        return -1;
+    if(a.age<b.age){
+        return 1;
     }
-    return 1;
+    return -1;
 };
 console.log(ArrUsers);
 
